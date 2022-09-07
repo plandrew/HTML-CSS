@@ -1,0 +1,97 @@
+/*Basic grid layout of the website*/
+
+.container {
+    display: grid;
+/* .container is box for whole grid */
+    max-width: 900px;
+    border: 1px solid red;
+    position: relative;
+    margin: auto;
+    height: 3000px;
+    grid-gap: 10px;
+/*Gap between each column & row*/
+    grid-template-areas: 
+    "header header"
+    "nav		nav"
+    "left		right"
+    "footer	footer";
+/*Basic grid design is definied*/
+
+/*
+grid-template: 1fr 100px 1fr / 20% 1fr 200px;
+*/
+
+/*Another way to define basic grid design - 3 columns = 1fraction, 100px, 1fraction, 3 rows = 20%, 1 fraction, 200px*/
+/*
+grid-template: repeat(3,1fr) / repeat(2,100px);
+*/
+/*Grid template defined via repeat function = it will create 3 columns 1fr each & 2 rows 100px each */
+
+    grid-template-columns: 200px minmax(100px, 300px);
+
+/*Mnimal & maximal dimension of the 2nd column is defined*/
+    grid-template-rows: 150px 200px 600px 200px;
+
+/*Exact dimension of each column & row is defined*/
+
+    justify-items: stretch;
+    /*used to stretch items to fill the grid area*/
+    justify-content: space-around;
+    /*equal amount of space on each side of the a grid element*/
+    align-items: stretch;
+    align-content: center;
+    /*items inside the container will be centered in the grid area*/
+    /*
+    To stretch items to fill the grid area -> align-items:stretch*/
+    */
+  }
+  
+  h1, h2 {
+    font-family: monospace;
+    text-align: center;
+  }
+  
+  header {
+    background-color: dodgerblue;
+    grid-area: header;
+    /*header will use grid-area of 1st row, according to grid-template-areas (grid layout)*/
+    /*another way to define grid-area for header is*/
+/*
+grid-area: 1/1/2/3
+*/  
+    /*header will utilise 1st row & 1st column & will end on 1st row (2-1) & 2nd column (3-1)*/
+  }
+  
+  nav {
+    background-color: beige;
+    grid-area: nav;
+  }
+  
+  .left {
+    background-color: dodgerblue;
+    grid-area: left;
+  }
+  
+  .right {
+    background-color: beige;
+    grid-area: right;
+  }
+  
+  footer {
+    background-color: dodgerblue;
+    grid-area: footer;
+  }
+  .overlap {
+    /*overlaped item on the grid layout*/
+    background-color: lightcoral;
+    grid-area: 2/4/1/2;
+    z-index: 5;
+  }
+
+  .new_item {
+    grid-auto-rows: 500px;
+    /*new item will be inserted inside the new row which is 500px tall*/
+    grid-auto-flow: column;
+    /*new item will be inserte as a new column*/
+  }
+

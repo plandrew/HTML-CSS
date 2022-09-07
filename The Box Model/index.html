@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+<h1>Content containers</h1>
+
+    <p>This is <strong>content</strong>.<br>
+    Content require container for storage, positioning & for applying styles
+    </p>
+    <p>Types of containers:
+        <ul>
+            <li>inline</li>
+            <li>block</li>
+            <li>inlin-block</li>
+        </ul>
+    </p>
+    <span> --- Padding 50px from the left / This is content inside inline element</span>
+    <ul>
+        <li>Padding used to move the content inside the container</li>
+        <li>No margin</li>
+        <li>Images as a standard are inline elements</li>
+        <li>Padding from the left to move the content 50px from the left side</li>
+        <li>Example tags = span, p, img</li>
+    </ul>
+    <div class="basic">--- Margin 50px from the left / --- Padding 50px from the left / This is content inside box element</div>
+    <ul>
+        <li>Take all available width</li>
+        <li>Padding used to move the content inside the container</li>
+        <li>Margin used to posit the element inside the viewport</li>
+        <li>Example tags = div, section, main, navbar, header, footer</li>
+    </ul>
+    <div class="inline-block" >
+        <p>This is <stong>contenet</stong> inside inline-block conteiner</p>
+        <ul>
+            <li>Take width as required to cover the content</li>
+            <li>Margin used to posit the element inside the viewport</li>
+        </ul>
+    </div>
+
+<h1>Relative position of the containers</h1>
+<span>Inline container 1</span>
+<span>Inline container 2</span>
+
+<div><p>Block element 1</p></div>
+<div><p>Block elemenet 2</p></div>
+
+<div class="inline-block"><p>Block element 1</p></div>
+<div class="inline-block"><p>Block elemenet 2</p></div>
+
+<h1>How to posit containers on the website?</h1>
+<ul>
+    <li>Fixed position in the viewport</li>
+    <li>Relative position = you can move container in relation to it's standard position</li>
+    <li>Absolute position = you can move container in relation to the parrent element</li>
+</ul>
+<div class="fixed">
+    <p>This is container in the fixed position in the viewport</p>
+</div>
+<div class="relative">
+    <p>This is relative container, moved 50px from the left from it's standard position - under list</p>
+</div>
+<div class="absolute">
+    <p>This is absolute container, moved 1000px from the parrent (html)</p>
+</div>
+
+</body>
+</html>

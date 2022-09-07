@@ -1,0 +1,36 @@
+span {
+    border: 2px solid red;
+    padding-left: 50px;
+}
+
+div {
+    border: 2px solid black;
+}
+
+div.basic {
+    margin-left: 50px;
+    padding-left: 50px;
+}
+
+.inline-block{
+    display:inline-block;
+    border: 2px solid blue;
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    border: 2px solid green;
+    top: 0px;
+}
+
+.relative{
+    position: relative;
+    left: 50px;
+}
+
+.absolute{
+    position: absolute;
+    top: 1500px;
+}
